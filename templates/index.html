@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{% block content %}
+<head>
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="../static/yt.css">
+</head>
+
+<body>
+    <div class = "last-posts">
+    <h1>Последние Видео</h1>
+        </div>
+
+    {% for post in posts %}
+    <div class="list-content">
+        <div class = "video">
+        <a href=""><img src="images/thumbnail4.png" alt="" class="thumbnail"></a>                             
+        <div class="flex-div-video">
+            <video width="220" height="140" controls class="video__item">
+                <source src="uploads/{{ post.filename }}" type="video/mp4">
+            </video>
+            <div class="video-info">
+                <h3><a href='http://127.0.0.1:5000/{{post.id}}'>{{post.title}}</a></h3>
+                <!-- <p>{{ post.description }}</p> -->
+                <p><a href="http://127.0.0.1:5000/profile/{{post.author_id}}">{{ post.author.username }}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+{%endblock%}

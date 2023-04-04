@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+{% block content %}
+  <head>
+    <meta charset="UTF-8">
+    
+    <title>Мой канал на YouTube</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='yt.css') }}">
+  </head>
+</head>
+<body>
+    <div class = "profile-info">
+    <header>
+      <h1>{{user.username}}</h1>
+
+    </header>
+
+    <main>
+      <section>
+        <h2>О канале</h2>
+        <p>Youtube chanel  </p>
+      </section>
+      <section>
+        <h2>Мои последние видео</h2>
+
+
+            {% for post in posts %}
+            <!-- <div class="profile-video-warapper"> -->
+
+              <div class = "profile-video">
+                <h2>{{ post.title }}</h2>
+                <video width="320" height="240" controls class = 'video__item'>
+                  <source src="../uploads/{{post.filename}}" type="video/mp4">
+                  <!-- <source src="uploads/{{post.video}}.ogv" type="video/ogg"> -->
+                </video>
+                <div class="video-info">
+                  <h3><a href='http://127.0.0.1:5000/{{post.id}}'>{{post.title}}</a></h3>
+                  <!-- <p>{{ post.description }}</p> -->
+                  <p><a href="http://127.0.0.1:5000/profile/{{post.author_id}}">{{ post.author.username }}</a></p>
+                  </div>
+              </div>
+            <!-- </div> -->
+        </div>
+        
+            {% endfor %}
+            
+            
+    </main>
+
+  </div>
+  </body>
+  {%endblock%}
+</html>

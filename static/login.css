@@ -1,0 +1,47 @@
+/* Стили для формы авторизации */
+.login {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .login input {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 25px;
+  }
+  
+  .login input:focus {
+    outline: none;
+    border-color: #00d1b2;
+    box-shadow: 0 0 10px rgba(0, 209, 178, 0.3);
+  }
+  
+  .login button {
+    padding: 15px;
+    background-color: #00d1b2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login button:hover {
+    background-color: #00c4a7;
+  }
+  

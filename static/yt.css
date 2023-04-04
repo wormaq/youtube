@@ -1,0 +1,94 @@
+/* Стили для заголовка страницы */
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Стили для блока с последними видео */
+.last-posts {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Стили для области с видео */
+.video {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.profile-video {
+
+  /* padding-top: 20px; */
+  width: calc(90% / 4);
+  float: right;
+  box-sizing: border-box;
+  /* margin-left: 100px; */
+  /* padding: 10px; */
+  /* left: 300px; */
+  /* padding-left: 150px; */
+}
+.profile-info{
+  /* padding-left: 230px;
+  padding-top: 10px; */
+  padding: 10px 0 0 260px;
+}
+
+.logout{
+
+  padding-left: 10px;
+}
+
+/* Стили для изображения миниатюры видео */
+.thumbnail {
+  width: 246px;
+  height: 138px;
+  margin-right: 16px;
+}
+
+/* Стили для области информации о видео */
+.video-info {
+  flex: 1;
+  padding-left: 10px;
+}
+.last-posts{
+
+  padding-right: 130px;
+  padding-top: 10px;
+}
+
+/* Стили для заголовка видео */
+.video-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+/* Стили для ссылки на профиль автора видео */
+.video-info p a {
+  color: #606060;
+  text-decoration: none;
+}
+
+/* Стили для видео-плеера */
+.video__item {
+  width: 246px;
+  height: 138px;
+  background-color: #000000;
+}
+.flex-div-video{
+  display: block;
+}
+
+.profile-video-warapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ul{
+ list-style: none;
+}

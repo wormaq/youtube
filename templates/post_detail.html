@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{% block content %}
+<head>
+	<title>Название видео на YouTube</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vid.css') }}">
+</head>
+<body>
+	<div class = "detail">
+    <video width="560" height="315" controls class = 'video__item'>
+        <source src="../uploads/{{post.filename}}" type="video/mp4">
+
+        <!-- <source src="uploads/{{post.video}}.ogv" type="video/ogg"> -->
+       </video>
+       <h3>{{ post.title }}</h3>
+        <h1>{{ post.author.username }}</h1>
+        <p>{{ post.description }}</p>
+        <p>{{ post.date }}</p>
+       <li class="nav-item">
+        <a href="http://127.0.0.1:5000/{{post.id}}/update">Update<a>
+    </li>
+    <li class="nav-item">
+        <a href="http://127.0.0.1:5000/{{post.id}}/delete">Delete<a>
+    </li>
+    <form method="GET" action="{{ url_for('add_to_favorites', id=post.id) }}">
+        <button type="submit"><img src="../static/images/like-svgrepo-com.svg" alt="like" class="btn-like"></button>
+    </form>
+    
+        </div>
+    {%endblock%}
+</body>
+</html>

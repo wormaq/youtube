@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/register.css">
+</head>
+<body>
+    
+</body>
+</html> 
+<body> 
+ <div class="container"> 
+  <h2>Registration Form</h2> 
+  {%with messages = get_flashed_messages%} 
+{% if messages  and 'Email' in messages[0] %} 
+ <div class="'notification is-danger"> 
+  {{messages[0]}}, Go to <a href="{{url_for('login')}}">login page</a> 
+ </div> 
+ {%endif%} 
+ {%endwith%} 
+ <form action="" method="post"> 
+  <div class="form-group"> 
+    <label for="username">Username</label> 
+    <input type="text" class="form-control input" id="exampleInputfirstname" name="username"> 
+  </div> 
+  <div class="form-group"> 
+    <label for="Email1">Email address</label> 
+    <input type="email" class="form-control input" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"> 
+  </div> 
+  <div class="form-group"> 
+    <label for="Age">Age</label> 
+    <input type="age" class="form-control input" id="99" aria-describedby="emailHelp" name="age"> 
+  </div> 
+  <div class="form-group"> 
+    <label for="Password">Password</label> 
+    {%with messages = get_flashed_messages%} 
+    {% if messages and 'password'in messages [0] %} 
+     <div class="'notification is-danger"> 
+      {{messages[0]}}, Go to <a href="{{url_for('login')}}">login page</a> 
+     </div> 
+     {%endif%} 
+     {%endwith%} 
+    <input type="password" class="form-control input" id="exampleInputPassword" name="password"> 
+  </div> 
+  <button type="submit" class="btn btn-primary button" name="create">Sign up</button> 
+  {%endblock%}
+</form> 
+</div> 
+
+
